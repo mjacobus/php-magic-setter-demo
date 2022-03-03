@@ -30,4 +30,14 @@ class PersonTest extends TestCase
 
         $this->assertEquals('John', $this->person->getFirstName());
     }
+
+    /**
+     * @test
+     */
+    public function assignsAndRetrievesLastName()
+    {
+        $this->person->setLastName('Doe');
+
+        $this->assertEquals('Doe', $this->person->getLastName());
+    }
 }
