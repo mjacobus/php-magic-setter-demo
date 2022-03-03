@@ -1,0 +1,6 @@
+# test_runner.yml
+
+adapters:
+  phpunit:
+    adapter: phpunit
+    file_pattern: ".*Test.php"
