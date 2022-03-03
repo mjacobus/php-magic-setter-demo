@@ -40,4 +40,40 @@ class PersonTest extends TestCase
 
         $this->assertEquals('Doe', $this->person->getLastName());
     }
+
+    /**
+     * @test
+     */
+    public function setsFirstNameViaMagicSetter()
+    {
+        $this->person->firstName = 'John';
+        // Mesmo que:
+        // $this->person->setFirstName('John');
+
+        $this->assertEquals('John', $this->person->getFirstName());
+    }
+
+    /**
+     * @test
+     */
+    public function setsLastNameViaMagicSetter()
+    {
+        $this->person->lastName = 'Doe';
+        // Mesmo que:
+        // $this->person->setLastName('John');
+
+        $this->assertEquals('Doe', $this->person->getLastName());
+    }
+
+    /**
+     * @test
+     */
+    public function setsFirstAndLastNameViaMagicSetter()
+    {
+        $this->person->firstName = 'John';
+        $this->person->lastName = 'Doe';
+
+        $this->assertEquals('John', $this->person->getFirstName());
+        $this->assertEquals('Doe', $this->person->getLastName());
+    }
 }
