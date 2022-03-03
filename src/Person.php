@@ -7,15 +7,15 @@ class Person
     /**
      * @var string
      */
-    private $name;
+    private $firstName;
 
-    public function setName($name)
+    public function setFirstName($firstName)
     {
-        $this->name = $name;
+        $this->firstName = $firstName;
     }
 
-    public function getName()
+    public function getFirstName()
     {
-        return $this->name;
+        return $this->firstName;
     }
 }

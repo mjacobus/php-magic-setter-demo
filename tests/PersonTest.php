@@ -24,10 +24,10 @@ class PersonTest extends TestCase
     /**
      * @test
      */
-    public function assignsAndRetrievesName()
+    public function assignsAndRetrievesFirstName()
     {
-        $this->person->setName('John Doe');
+        $this->person->setFirstName('John');
 
-        $this->assertEquals('John Doe', $this->person->getName());
+        $this->assertEquals('John', $this->person->getFirstName());
     }
 }
