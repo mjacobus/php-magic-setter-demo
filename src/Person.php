@@ -37,11 +37,11 @@ class Person
     public function __set($propertyName, $propertyValue)
     {
         if ($propertyName === 'firstName') {
-            $this->firstName = $propertyValue;
+            $this->setFirstName($propertyValue);
         }
 
         if ($propertyName === 'lastName') {
-            $this->lastName = $propertyValue;
+            $this->setLastName($propertyValue);
         }
     }
 }
