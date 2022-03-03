@@ -37,11 +37,13 @@ class Person
     public function __set($propertyName, $propertyValue)
     {
         if ($propertyName === 'firstName') {
-            $this->setFirstName($propertyValue);
+            return $this->setFirstName($propertyValue);
         }
 
         if ($propertyName === 'lastName') {
-            $this->setLastName($propertyValue);
+            return $this->setLastName($propertyValue);
         }
+
+        throw new \Exception("property '$propertyName' does not exist");
     }
 }

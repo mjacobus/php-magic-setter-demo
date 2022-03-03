@@ -76,4 +76,18 @@ class PersonTest extends TestCase
         $this->assertEquals('John', $this->person->getFirstName());
         $this->assertEquals('Doe', $this->person->getLastName());
     }
+
+    /**
+     * @test
+     *
+     * @expectedException     MyException
+     * @expectedExceptionMessage property 'foo' does not exist
+     */
+    public function throwsExceptionWhenMagicSetterIsNotRecognized()
+    {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("property 'foo' does not exist");
+
+        $this->person->foo = 'xyz';
+    }
 }
